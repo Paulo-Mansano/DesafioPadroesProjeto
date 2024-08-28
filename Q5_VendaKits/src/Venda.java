@@ -3,16 +3,16 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Venda {
+public class Venda implements VendaComponent {
     private LocalDateTime data;
-    private List<ItemDeVenda> itens;
+    private List<VendaComponent> itens;
 
     public Venda(LocalDateTime data) {
         this.data = data;
-        itens = new ArrayList<>();
+        this.itens = new ArrayList<>();
     }
 
-    public List<ItemDeVenda> getItens() {
+    public List<VendaComponent> getItens() {
         return itens;
     }
 
@@ -20,28 +20,29 @@ public class Venda {
         return data;
     }
 
-    public double getTotal() {
+    public void adicionarItem(VendaComponent item) {
+        itens.add(item);
+    }
+
+    @Override
+    public double getPreco() {
         double total = 0.0;
-        for(ItemDeVenda item : itens){
-            total += item.getSubTotal();
+        for (VendaComponent item : itens) {
+            total += item.getPreco();
         }
         return total;
     }
 
-    public void registrarVenda(Produto produto, int quantidade) {
-        ItemDeVenda item = new ItemDeVenda(produto, quantidade);
-        itens.add(item);
-    }
-
+    @Override
     public String emitirComprovante() {
         StringBuilder nota = new StringBuilder();
-        nota.append(String.format("COMPROVANTE DE VENDA%n"));
+        nota.append("COMPROVANTE DE VENDA\n");
         nota.append(data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
         nota.append("\n");
-        for (ItemDeVenda item : itens) {
-            nota.append(item.toString());
+        for (VendaComponent item : itens) {
+            nota.append(item.emitirComprovante()).append("\n");
         }
-        nota.append(String.format("Total: %.2f", getTotal()));
+        nota.append(String.format("Total: %.2f", getPreco()));
         return nota.toString();
     }
 }

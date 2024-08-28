@@ -1,4 +1,4 @@
-public class Produto {
+public class Produto implements VendaComponent {
     private int id;
     private String nome;
     private double preco;
@@ -17,8 +17,13 @@ public class Produto {
         return nome;
     }
 
+    @Override
     public double getPreco() {
         return preco;
     }
 
+    @Override
+    public String emitirComprovante() {
+        return String.format("%d %s x %.2f", id, nome, preco);
+    }
 }

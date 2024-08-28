@@ -1,4 +1,4 @@
-public class ItemDeVenda {
+public class ItemDeVenda implements VendaComponent {
     private Produto produto;
     private int quantidade;
 
@@ -15,13 +15,14 @@ public class ItemDeVenda {
         return quantidade;
     }
 
-    public double getSubTotal() {
+    @Override
+    public double getPreco() {
         return produto.getPreco() * quantidade;
     }
 
     @Override
-    public String toString() {
-        return String.format("%d %s %d x %.2f = %.2f%n",produto.getId(), produto.getNome(), quantidade, produto.getPreco(), getSubTotal());
+    public String emitirComprovante() {
+        return String.format("%d %s %d x %.2f = %.2f%n",
+            produto.getId(), produto.getNome(), quantidade, produto.getPreco(), getPreco());
     }
-            
 }
