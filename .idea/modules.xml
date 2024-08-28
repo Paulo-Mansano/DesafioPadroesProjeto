@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/DesafioPadroesProjeto.iml" filepath="$PROJECT_DIR$/.idea/DesafioPadroesProjeto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Q1_ValidadorDeCampos/Q1_ValidadorDeCampos.iml" filepath="$PROJECT_DIR$/Q1_ValidadorDeCampos/Q1_ValidadorDeCampos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Q2_LogSimples/Q2_LogSimples.iml" filepath="$PROJECT_DIR$/Q2_LogSimples/Q2_LogSimples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Q3_CodificadorDeStrings/Q3_CodificadorDeStrings.iml" filepath="$PROJECT_DIR$/Q3_CodificadorDeStrings/Q3_CodificadorDeStrings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Q4_Visualizadores/Q4_Visualizadores.iml" filepath="$PROJECT_DIR$/Q4_Visualizadores/Q4_Visualizadores.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Q5_VendaKits/Q5_VendaKits.iml" filepath="$PROJECT_DIR$/Q5_VendaKits/Q5_VendaKits.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Q6_JodoDeAzar/Q6_JodoDeAzar.iml" filepath="$PROJECT_DIR$/Q6_JodoDeAzar/Q6_JodoDeAzar.iml" />
+    </modules>
+  </component>
+</project>
