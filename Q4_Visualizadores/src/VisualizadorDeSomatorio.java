@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class VisualizadorDeSomatorio {
+public class VisualizadorDeSomatorio implements Visualizador {
     private List<Integer> valores;
 
     public VisualizadorDeSomatorio(List<Integer> valores){
@@ -20,5 +20,11 @@ public class VisualizadorDeSomatorio {
             .mapToInt(Integer::intValue)
             .sum();
         System.out.println("Somatorio: "+soma+", quantidade de elementos analisados: "+valores.size());
+    }
+
+    @Override
+    public void update (int numero) {
+        acrescentaValor(numero);
+        exibeSomatorio();
     }
 }

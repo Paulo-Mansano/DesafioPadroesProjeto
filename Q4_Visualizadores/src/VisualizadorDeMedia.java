@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class VisualizadorDeMedia {
+public class VisualizadorDeMedia implements Visualizador {
     private List<Integer> valores;
 
     public VisualizadorDeMedia(List<Integer> valores){
@@ -21,5 +21,11 @@ public class VisualizadorDeMedia {
             .average()
             .orElse(0.0);
         System.out.println("Media: "+media+", quantidade de elementos analisados: "+valores.size());
+    }
+
+    @Override
+    public void update (int numero) {
+        acrescentaValor(numero);
+        exibeMedia();
     }
 }
