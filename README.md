@@ -1,3 +1,6 @@
+
+# Alunos:
+Andrei Cunha Boeck, Júlia Peixoto, Marcela Zarichta, Paulo Eduardo e Vicente Piltcher.
 # Desafio sobre Padrões de Projeto
 
 O objetivo é resolver a maior quantidade de problemas usando padrões de projeto.
